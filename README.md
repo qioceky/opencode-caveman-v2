@@ -6,7 +6,7 @@ Caveman token-compression plugin for **OpenCode V2**. Terse responses, full tech
 
 ```sh
 # dari GitHub (tanpa npm publish)
-opencode plugin add github:USERNAME/opencode-caveman-v2
+opencode plugin add github:qioceky/opencode-caveman-v2
 
 # atau lokal
 opencode plugin add file:///path/ke/opencode-caveman-v2
