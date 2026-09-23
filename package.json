@@ -1,0 +1,35 @@
+{
+  "name": "opencode-caveman-v2",
+  "version": "0.1.0",
+  "description": "Caveman token-compression plugin for OpenCode V2 (terse responses, /caveman levels)",
+  "type": "module",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "import": "./dist/index.js",
+      "types": "./dist/index.d.ts"
+    }
+  },
+  "files": [
+    "dist",
+    "src"
+  ],
+  "scripts": {
+    "build": "tsc",
+    "prepublishOnly": "npm run build"
+  },
+  "keywords": [
+    "opencode",
+    "plugin",
+    "caveman",
+    "token-compression"
+  ],
+  "license": "MIT",
+  "dependencies": {
+    "@opencode/plugin": "2.0.14"
+  },
+  "devDependencies": {
+    "typescript": "^5.6.0"
+  }
+}
