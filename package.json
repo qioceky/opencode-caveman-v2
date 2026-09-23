@@ -1,6 +1,6 @@
 {
   "name": "opencode-caveman-v2",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "description": "Caveman token-compression plugin for OpenCode V2 (terse responses, /caveman levels)",
   "repository": {
     "type": "git",
