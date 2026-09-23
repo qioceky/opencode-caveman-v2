@@ -93,7 +93,18 @@ export function compressMarkdown(src: string): string {
       continue
     }
     blanks = 0
-    out.push(line.replace(FILLER_RE, "").replace(/[ \t]{2,}/g, " ").trimEnd())
+    const s = line
+      .replace(FILLER_RE, "")
+      .replace(/^\s*[,;:—–-]+\s*/, "")
+      .replace(/\s+([,.!?;:])/g, "$1")
+      .replace(/[ \t]{2,}/g, " ")
+      .trim()
+    if (s === "") {
+      blanks++
+      if (blanks <= 1) out.push("")
+      continue
+    }
+    out.push(s)
   }
   return out.join("\n").replace(/\n{3,}/g, "\n\n").trim() + "\n"
 }
